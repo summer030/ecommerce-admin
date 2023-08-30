@@ -83,7 +83,7 @@ const BillboardForm: React.FC<BillboardFormProps> = ({ initialData }) => {
       await axios.delete(
         `/api/${params.storeId}/billboards/${params.billboardId}`
       );
-      router.refresh;
+      router.refresh();
       router.push(`/${params.storeId}/billboards`);
       toast.success("Billboard deleted.");
     } catch (error) {
